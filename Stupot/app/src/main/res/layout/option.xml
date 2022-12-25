@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="-5dp"
+    android:paddingBottom="-5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/option"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="349dp"
+            android:layout_height="279dp"
+            android:layout_marginTop="24dp"
+            android:elevation="19dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/search_label"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="@font/notosans_regular"
+                android:text="장소 검색"
+                android:textAlignment="textStart"
+                android:textColor="@color/text_3"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/search"
+                android:layout_width="331dp"
+                android:layout_height="47dp"
+                app:boxStrokeWidth="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="331dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/search_input"
+                    android:hint="검색어를 입력하세요"
+                    android:singleLine="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/filter1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="2.5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="221dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/filter1_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:fontFamily="@font/notosans_regular"
+                        android:text="공부 기록이 있는 장소 보이기"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/text_3"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/filter1_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:fontFamily="@font/notosans_regular"
+                        android:text="지금까지 공부한 기록을 지도에 표시합니다"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/text_1"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/filter1_switch"
+                    android:layout_width="98dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:switchMinWidth="54dp"
+                    android:thumbTint="@color/point_2"
+                    android:trackTint="@color/point_2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filter2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="221dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/filter2_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:fontFamily="@font/notosans_regular"
+                        android:text="주변 추천 장소 보이기"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/text_3"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/filter2_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:fontFamily="@font/notosans_regular"
+                        android:text="추천 키워드의 장소들을 지도에 표시합니다"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/text_1"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/filter2_switch"
+                    android:layout_width="98dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:switchMinWidth="54dp"
+                    android:thumbTint="@color/point_2"
+                    android:trackTint="@color/text_1" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/calendar_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/calendar_button" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/option_bg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
