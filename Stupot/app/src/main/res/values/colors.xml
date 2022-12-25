@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="point_0">#FFFFFF</color>
+    <color name="point_1">#6DDEC3</color>
+    <color name="point_2">#67D2B9</color>
+    <color name="point_3">#5AB8A2</color>
+    <color name="point_4">#479180</color>
+    <color name="point_5">#285248</color>
+
+    <color name="text_0">#FFFFFF</color>
+    <color name="text_1">#8C8C8C</color>
+    <color name="text_2">#4D4D4</color>
+    <color name="text_3">#333333</color>
+    <color name="text_4">#1A1A1A</color>
+    <color name="text_5">#000000</color>
 </resources>
