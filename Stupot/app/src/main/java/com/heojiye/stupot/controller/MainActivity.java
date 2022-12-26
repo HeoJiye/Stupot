@@ -1,4 +1,4 @@
-package com.heojiye.stupot;
+package com.heojiye.stupot.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.option);
+        setContentView(R.layout.main);
     }
 }
