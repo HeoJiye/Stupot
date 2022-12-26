@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/log_logo"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/log_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/notosans_bold"
+            android:maxWidth="240dp"
+            android:minWidth="240dp"
+            android:text="[장소 이름]"
+            android:textAlignment="center"
+            android:textColor="@color/text_0"
+            android:textSize="28dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/timer_play"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/timer_play_bg"
+                    android:layout_width="291dp"
+                    android:layout_height="75dp"
+                    android:elevation="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/timer_play" />
+
+                <TextView
+                    android:id="@+id/timer_play_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="19dp"
+                    android:fontFamily="@font/notosans_bold"
+                    android:text="00:00:00"
+                    android:textColor="@color/text_0"
+                    android:textSize="26dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/timer_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/timer_pause_bg"
+                    android:layout_width="291dp"
+                    android:layout_height="75dp"
+                    android:elevation="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/timer_pause" />
+
+                <TextView
+                    android:id="@+id/timer_pause_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="19dp"
+                    android:fontFamily="@font/notosans_bold"
+                    android:text="00:00:00"
+                    android:textColor="@color/text_1"
+                    android:textSize="26dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/timer_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosans_light"
+            android:text="시간을 클릭하면 일시 중지/재개 됩니다."
+            android:textAlignment="center"
+            android:textColor="@color/text_0"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/timer_cancel"
+            android:layout_width="200dp"
+            android:layout_height="63dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginRight="60dp"
+            app:srcCompat="@drawable/timer_cancel_button" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
