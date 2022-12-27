@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/point_2"
-    tools:context=".controller.MainActivity">
+    tools:context="ddwu.moblie.finalproject.ma02_20201031.controller.MainActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"

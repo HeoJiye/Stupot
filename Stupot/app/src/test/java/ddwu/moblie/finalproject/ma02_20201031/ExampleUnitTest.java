@@ -1,4 +1,4 @@
-package com.heojiye.stupot;
+package ddwu.moblie.finalproject.ma02_20201031;
 
 import org.junit.Test;
 

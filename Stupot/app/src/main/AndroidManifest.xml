@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,8 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stupot"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBkOc_8tbRWcUVX3zjZXRicKgAL9PwnjKk"/>
+
         <activity
-            android:name=".controller.MainActivity"
+            android:name="ddwu.moblie.finalproject.ma02_20201031.controller.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +31,9 @@
 
             <meta-data
                 android:name="android.app.lib_name"
-                android:value="" />
+                android:value="ddwu.moblie.finalproject.ma02_20201031" />
         </activity>
+        <activity android:name="ddwu.moblie.finalproject.ma02_20201031.controller.HomeActivity"/>
     </application>
 
 </manifest>
