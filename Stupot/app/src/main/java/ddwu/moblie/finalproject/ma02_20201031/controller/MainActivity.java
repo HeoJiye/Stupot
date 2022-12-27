@@ -47,10 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         switch (requestCode) {
             case REQ_PERMISSION_CODE :
-                if (grantResults.length == 0 ||
-                        grantResults[0] != PackageManager.PERMISSION_GRANTED ||
-                        grantResults[1] != PackageManager.PERMISSION_GRANTED) {
+                if (grantResults.length > 0 &&
+                        grantResults[0] == PackageManager.PERMISSION_GRANTED &&
+                        grantResults[1] == PackageManager.PERMISSION_GRANTED) {
 
+                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(intent);
+
+                } else {
                     exitProgram();
                 }
         }

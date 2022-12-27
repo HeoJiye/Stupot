@@ -3,6 +3,7 @@ package ddwu.moblie.finalproject.ma02_20201031.controller;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -54,6 +55,8 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     }
                 });
+        } else {
+            exitProgram();
         }
 
     }
@@ -61,5 +64,17 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
+    }
+
+    private void exitProgram() {
+        moveTaskToBack(true);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            finishAndRemoveTask();
+        } else {
+            finish();
+        }
+
+        System.exit(0);
     }
 }
