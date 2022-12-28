@@ -34,6 +34,7 @@
                 android:value="ddwu.moblie.finalproject.ma02_20201031" />
         </activity>
         <activity android:name="ddwu.moblie.finalproject.ma02_20201031.controller.HomeActivity"/>
+        <activity android:name="ddwu.moblie.finalproject.ma02_20201031.controller.TimerActivity"/>
     </application>
 
 </manifest>

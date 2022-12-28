@@ -10,15 +10,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/option"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
+        android:layout_height="wrap_content"
+        android:onClick="windowTap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="349dp"
-            android:layout_height="279dp"
-            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:elevation="19dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -26,29 +28,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/search_label"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:fontFamily="@font/notosans_regular"
-                android:text="장소 검색"
-                android:textAlignment="textStart"
-                android:textColor="@color/text_3"
-                android:textSize="16dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/search"
-                android:layout_width="331dp"
-                android:layout_height="47dp"
-                app:boxStrokeWidth="0dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/search"
+                    android:layout_width="282dp"
+                    android:layout_height="50dp"
+                    app:boxStrokeWidth="0dp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="331dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/search_input"
-                    android:hint="검색어를 입력하세요"
-                    android:singleLine="false" />
-            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/filter1"
@@ -148,7 +139,7 @@
                     android:scaleY="1.2"
                     android:switchMinWidth="54dp"
                     android:thumbTint="@color/point_2"
-                    android:trackTint="@color/text_1" />
+                    android:trackTint="@color/text_2" />
 
             </LinearLayout>
 
@@ -156,6 +147,7 @@
                 android:id="@+id/calendar_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="invisible"
                 app:srcCompat="@drawable/calendar_button" />
 
         </LinearLayout>
@@ -163,14 +155,12 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="360dp"
             android:elevation="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/option_bg" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
